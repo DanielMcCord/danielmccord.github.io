@@ -1,7 +1,15 @@
+/*
+Some blues - progressively bluer, darker, and more saturated:
+#CCFFE6
+#8AE6CF
+#52CCCC <-- base: hsb=180,60,80
+#2492B3 <-- not currently used
+#003766 <-- extra dark
+*/
 html {
   width: 100%;                    /* 100% width of parent (root) element */
   height: 100vh;                  /* 100% height of viewport */
-  background: rgb(0, 0, 0, 0.1);  /* 10% opacity black (very light gray) */
+  background: #CCFFE6;  /* 10% opacity black (very light gray) */
   font-size: 1.0em;               /* our root font size */
 }
 body {
@@ -23,15 +31,15 @@ div.container {
     "foot foot foot";
 }
 div.header {
-  background: rgb(0, 0, 0, 0.2);                             /* 20% black */
+  background: #52CCCC;                             /* 20% black */
   grid-area: head;                /* head corresponds to name in template */
 }
 div.footer {
-  background: rgb(0, 0, 0, 0.2);
+  background: #003766;
   grid-area: foot;
 }
 div.panel {                            /* div elements with "panel" class */
-  background: rgb(0, 0, 0, 0.1);                             /* 10% black */
+  background: #8AE6CF;                             /* 10% black */
 }
 div.panel.left {                    /* with both "panel" and "left" class */
   grid-area: panleft;
