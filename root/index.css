@@ -12,7 +12,7 @@ html {
     width: 100%;
     /* 100% height of viewport */
     height: 100vh;
-    background: whitesmoke;
+    background: WhiteSmoke;
     /* our root font size */
     font-size: 1.0em;
 }
@@ -49,7 +49,7 @@ div.container {
 }
 
 div.header {
-    background: skyblue;
+    background: SkyBlue;
     text-align: center;
     /* head corresponds to name in template */
     grid-area: head;
@@ -64,7 +64,7 @@ div.footer {
 
 /* div elements with "panel" class */
 div.panel {
-    background: powderblue;
+    background: PowderBlue;
 }
 
 /* with both "panel" and "left" class */
