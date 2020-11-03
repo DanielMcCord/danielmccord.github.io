@@ -8,70 +8,99 @@ Some blues - progressively bluer, darker, and more saturated:
 */
 
 html {
-  width: 100%;                    /* 100% width of parent (root) element */
-  height: 100vh;                  /* 100% height of viewport */
-  background: #CCFFE6;
-  font-size: 1.0em;               /* our root font size */
+    /* 100% width of parent (root) element */
+    width: 100%;
+    /* 100% height of viewport */
+    height: 100vh;
+    background: #CCFFE6;
+    /* our root font size */
+    font-size: 1.0em;
 }
 
-h1{
+h1 {
     font-family: "Source Code Pro", "Bitstream Vera Sans Mono", "Courier New", monospace;
 }
 
 body {
-  margin: 0;                      /* content goes to edge of viewport */
-  height: 100vh;                  /* and spans height of viewport */
+    /* content goes to edge of viewport */
+    margin: 0;
+    /* and spans height of viewport */
+    height: 100vh;
 }
+
 div.container {
-  min-height: 25rem;            /* mainbody height never squishes < 25rem */
-  display: grid;
-  width: 100%;
-  height: 100%;
-  grid-template-columns:
-    [left] 10rem auto 10rem [right];
-  grid-template-rows:
-    [top] 5rem auto 5rem [bottom];
-  grid-template-areas:
-    "head head head"
-    "panleft mainbody panright"
-    "foot foot foot";
+    /* mainbody height never squishes < 25rem */
+    min-height: 25rem;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns:
+        [left] 10rem auto 10rem [right];
+    grid-template-rows:
+        [top] 5rem auto 5rem [bottom];
+    grid-template-areas:
+        "head head head"
+        "panleft mainbody panright"
+        "foot foot foot";
 }
+
 div.header {
-  background: #52CCCC;
+    background: #52CCCC;
     text-align: center;
-  grid-area: head;                /* head corresponds to name in template */
+    /* head corresponds to name in template */
+    grid-area: head;
 }
+
 div.footer {
-  background: #003766;
+    background: #003766;
     color: white;
     text-align: center;
-  grid-area: foot;
+    grid-area: foot;
 }
-div.panel {                            /* div elements with "panel" class */
-  background: #8AE6CF;                             /* 10% black */
+
+/* div elements with "panel" class */
+div.panel {
+    background: #8AE6CF;
 }
-div.panel.left {                    /* with both "panel" and "left" class */
-  grid-area: panleft;
+
+/* with both "panel" and "left" class */
+div.panel.left {
+    grid-area: panleft;
 }
+
 div.panel.right {
-  grid-area: panright;
+    grid-area: panright;
 }
+
 div.mainbody {
-  grid-area: mainbody;
-  width: 30rem;                   /* mainbody width is fixed */ justify-self: center;           /* and always centered in grid area */
+    grid-area: mainbody;
+    /* mainbody width is fixed */
+    width: 30rem;
+    /* and always centered in grid area */
+    justify-self: center;
 }
-@media screen and (max-width: 50rem) {     /* if viewport width < 50rem */
-  div.panel.left {
-    grid-column-end: left;            /* left panel stops at left edge */
-  }
-  div.panel.right {
-    grid-column-start: right;         /* right panel starts at right edge */
-  }
-  div.panel {
-    display: none;                    /* neither panel is displayed */
-  }
-  div.mainbody {
-    grid-column-start: left;          /* mainbody starts at left edge */
-    grid-column-end: right;           /* mainbody ends at right edge */
-  }
+
+/* if viewport width < 50rem */
+@media screen and (max-width: 50rem) {
+    div.panel.left {
+        /* left panel stops at left edge */
+        grid-column-end: left;
+    }
+
+    div.panel.right {
+        /* right panel starts at right edge */
+        grid-column-start: right;
+    }
+
+    div.panel {
+        /* neither panel is displayed */
+        display: none;
+    }
+
+    div.mainbody {
+        /* mainbody starts at left edge */
+        grid-column-start: left;
+        /* mainbody ends at right edge */
+        grid-column-end: right;
+    }
 }
