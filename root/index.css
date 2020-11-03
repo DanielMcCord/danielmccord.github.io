@@ -6,12 +6,18 @@ Some blues - progressively bluer, darker, and more saturated:
 #2492B3 unused
 #003766 extra dark
 */
+
 html {
   width: 100%;                    /* 100% width of parent (root) element */
   height: 100vh;                  /* 100% height of viewport */
   background: #CCFFE6;
   font-size: 1.0em;               /* our root font size */
 }
+
+h1{
+    font-family: "Source Code Pro", "Bitstream Vera Sans Mono", "Courier New", monospace;
+}
+
 body {
   margin: 0;                      /* content goes to edge of viewport */
   height: 100vh;                  /* and spans height of viewport */
