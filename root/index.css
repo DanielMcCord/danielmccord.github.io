@@ -12,13 +12,17 @@ html {
     width: 100%;
     /* 100% height of viewport */
     height: 100vh;
-    background: #CCFFE6;
+    background: whitesmoke;
     /* our root font size */
     font-size: 1.0em;
 }
 
 h1 {
     font-family: "Source Code Pro", "Bitstream Vera Sans Mono", "Courier New", monospace;
+}
+
+h1 a {
+    color: black;
 }
 
 body {
@@ -45,7 +49,7 @@ div.container {
 }
 
 div.header {
-    background: #52CCCC;
+    background: skyblue;
     text-align: center;
     /* head corresponds to name in template */
     grid-area: head;
@@ -60,7 +64,7 @@ div.footer {
 
 /* div elements with "panel" class */
 div.panel {
-    background: #8AE6CF;
+    background: powderblue;
 }
 
 /* with both "panel" and "left" class */
