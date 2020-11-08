@@ -15,6 +15,7 @@ html {
     background: WhiteSmoke;
     /* our root font size */
     font-size: 1.0em;
+    overflow-wrap: anywhere;
 }
 
 h1 {
@@ -41,7 +42,7 @@ div.container {
     grid-template-columns:
         [left] 10rem auto 10rem [right];
     grid-template-rows:
-        [top] 5rem auto 5rem [bottom];
+        [top] max-content auto max-content [bottom];
     grid-template-areas:
         "head head head"
         "panleft mainbody panright"
@@ -49,6 +50,8 @@ div.container {
 }
 
 div.header {
+    padding-left: 12pt;
+    padding-right: 12pt;
     background: SkyBlue;
     text-align: center;
     /* head corresponds to name in template */
@@ -56,6 +59,7 @@ div.header {
 }
 
 div.footer {
+    padding: 12pt;
     background: #003766;
     color: white;
     text-align: center;
