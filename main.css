@@ -1,0 +1,114 @@
+/*
+Some blues - progressively bluer, darker, and more saturated:
+#CCFFE6
+#8AE6CF
+#52CCCC base: hsb=180,60,80
+#2492B3 unused
+#003766 extra dark
+*/
+
+html {
+    /* 100% width of parent (root) element */
+    width: 100%;
+    /* 100% height of viewport */
+    height: 100vh;
+    background: WhiteSmoke;
+    /* our root font size */
+    font-size: 1.0em;
+    overflow-wrap: anywhere;
+}
+
+h1 {
+    font-family: "Source Code Pro", "Bitstream Vera Sans Mono", "Courier New", monospace;
+}
+
+h1 a {
+    color: black;
+}
+
+body {
+    /* content goes to edge of viewport */
+    margin: 0;
+    /* and spans height of viewport */
+    height: 100vh;
+}
+
+div.container {
+    /* mainbody height never squishes < 25rem */
+    min-height: 25rem;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns:
+        [left] 10rem auto 10rem [right];
+    grid-template-rows:
+        [top] max-content auto max-content [bottom];
+    grid-template-areas:
+        "head head head"
+        "panleft mainbody panright"
+        "foot foot foot";
+}
+
+div.header {
+    padding-left: 12pt;
+    padding-right: 12pt;
+    background: SkyBlue;
+    text-align: center;
+    /* head corresponds to name in template */
+    grid-area: head;
+}
+
+div.footer {
+    padding: 12pt;
+    background: #003766;
+    color: white;
+    text-align: center;
+    grid-area: foot;
+}
+
+/* div elements with "panel" class */
+div.panel {
+    background: PowderBlue;
+}
+
+/* with both "panel" and "left" class */
+div.panel.left {
+    grid-area: panleft;
+}
+
+div.panel.right {
+    grid-area: panright;
+}
+
+div.mainbody {
+    grid-area: mainbody;
+    /* mainbody width is fixed */
+    width: 30rem;
+    /* and always centered in grid area */
+    justify-self: center;
+}
+
+/* if viewport width < 50rem */
+@media screen and (max-width: 50rem) {
+    div.panel.left {
+        /* left panel stops at left edge */
+        grid-column-end: left;
+    }
+
+    div.panel.right {
+        /* right panel starts at right edge */
+        grid-column-start: right;
+    }
+
+    div.panel {
+        /* neither panel is displayed */
+        display: none;
+    }
+
+    div.mainbody {
+        /* mainbody starts at left edge */
+        grid-column-start: left;
+        /* mainbody ends at right edge */
+        grid-column-end: right;
+    }
+}
