@@ -92,7 +92,13 @@ main {
 
 img.screenshot {
     max-width: 251px;
-    padding: 12pt;
+    padding-top: 12pt;
+    padding-left: 12pt;
+    padding-right: 12pt;
+}
+
+figcaption {
+    text-align: inherit;
 }
 
 /* if viewport width < 50rem */
