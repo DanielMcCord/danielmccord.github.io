@@ -66,6 +66,8 @@ footer {
 div.panel {
     background: PowderBlue;
     line-height: 170%;
+    font-family: "Source Code Pro", "Bitstream Vera Sans Mono", "Courier New", monospace;
+
 }
 
 /* with both "panel" and "left" class */
@@ -76,15 +78,18 @@ div.panel.left {
 
 main {
     grid-area: main;
-    justify-content: space-around;
     justify-self: center;
 }
 
-img.screenshot {
-    width: 75%;
+main figure {
     padding-top: 12pt;
     padding-left: 12pt;
     padding-right: 12pt;
+    text-align: center;
+}
+
+main figure img {
+    width: 75%;
 }
 
 figcaption {
