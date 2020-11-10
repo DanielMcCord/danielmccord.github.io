@@ -84,7 +84,7 @@ main {
     /*    display: flex;*/
     grid-area: main;
     /* mainbody width is fixed */
-    /*    width: 100rem;*/
+    min-width: 30rem;
     /* and always centered in grid area */
     justify-content: space-around;
     justify-self: center;
