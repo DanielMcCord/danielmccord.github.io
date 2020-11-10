@@ -44,7 +44,7 @@ div.container {
         "foot foot";
 }
 
-div.header {
+div header {
     padding-left: 12pt;
     padding-right: 12pt;
     background: #00294D;
@@ -65,7 +65,7 @@ div.footer {
 /* div elements with "panel" class */
 div.panel {
     background: PowderBlue;
-    line-height: 130%;
+    line-height: 170%;
 }
 
 /* with both "panel" and "left" class */
