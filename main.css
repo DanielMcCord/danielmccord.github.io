@@ -6,7 +6,7 @@ html {
     background: WhiteSmoke;
     /* our root font size */
     font-size: 1.0em;
-    overflow-wrap: anywhere;
+    overflow-wrap: word;
 }
 
 h1 {
@@ -35,7 +35,7 @@ div.container {
     width: 100%;
     height: 100%;
     grid-template-columns:
-        [left] 10em auto [right];
+        [left] min-content auto [right];
     grid-template-rows:
         [top] max-content auto max-content [bottom];
     grid-template-areas:
@@ -80,13 +80,13 @@ div.panel.right {
 */
 
 main {
-    display: flex;
+    /*    display: flex;*/
     grid-area: main;
     /* mainbody width is fixed */
     /*    width: 100rem;*/
     /* and always centered in grid area */
     justify-content: space-around;
-    margin: 12pt;
+    justify-self: center;
 }
 
 img.screenshot {
