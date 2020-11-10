@@ -65,6 +65,7 @@ div.footer {
 /* div elements with "panel" class */
 div.panel {
     background: PowderBlue;
+    line-height: 130%;
 }
 
 /* with both "panel" and "left" class */
