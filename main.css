@@ -74,18 +74,8 @@ div.panel.left {
     padding-right: 12pt;
 }
 
-/*
-div.panel.right {
-    grid-area: panright;
-}
-*/
-
 main {
-    /*    display: flex;*/
     grid-area: main;
-    /* mainbody width is fixed */
-    min-width: 30rem;
-    /* and always centered in grid area */
     justify-content: space-around;
     justify-self: center;
 }
@@ -99,31 +89,4 @@ img.screenshot {
 
 figcaption {
     text-align: inherit;
-}
-
-/* if viewport width < 50rem */
-@media screen and (max-width: 50rem) {
-    div.panel.left {
-        /* left panel stops at left edge */
-        grid-column-end: left;
-    }
-
-    /*
-    div.panel.right {
-        /\* right panel starts at right edge *\/
-        grid-column-start: right;
-    }
-    */
-
-    div.panel {
-        /* neither panel is displayed */
-        display: none;
-    }
-
-    div.mainbody {
-        /* mainbody starts at left edge */
-        grid-column-start: left;
-        /* mainbody ends at right edge */
-        grid-column-end: right;
-    }
 }
