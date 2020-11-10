@@ -3,7 +3,7 @@ html {
     width: 100%;
     /* 100% height of viewport */
     height: 100vh;
-    background: WhiteSmoke;
+    background: Ivory;
     /* our root font size */
     font-size: 1.0em;
     overflow-wrap: word;
@@ -45,9 +45,10 @@ div.container {
 }
 
 div header {
+    padding-top: 24pt;
     padding-left: 12pt;
     padding-right: 12pt;
-    background: #00294D;
+    background: #0D0040;
     color: white;
     text-align: center;
     /* head corresponds to name in template */
@@ -56,7 +57,7 @@ div header {
 
 footer {
     padding: 12pt;
-    background: #00294D;
+    background: #0D0040;
     color: white;
     text-align: center;
     grid-area: foot;
@@ -64,7 +65,7 @@ footer {
 
 /* div elements with "panel" class */
 div.panel {
-    background: PowderBlue;
+    background: #B1F084;
     line-height: 170%;
     font-family: "Source Code Pro", "Bitstream Vera Sans Mono", "Courier New", monospace;
 
@@ -74,15 +75,15 @@ div.panel {
 div.panel.left {
     grid-area: panleft;
     padding-right: 12pt;
+    font-size: 175%;
 }
 
 main {
     grid-area: main;
-    justify-self: center;
 }
 
 main figure {
-    padding-top: 12pt;
+    padding-top: 24pt;
     padding-left: 12pt;
     padding-right: 12pt;
     text-align: center;
@@ -90,8 +91,10 @@ main figure {
 
 main figure img {
     width: 75%;
+    border: 1px solid #000000;
 }
 
 figcaption {
     text-align: inherit;
+    font-size: 200%
 }
