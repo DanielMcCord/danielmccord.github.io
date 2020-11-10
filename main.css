@@ -1,12 +1,3 @@
-/*
-Some blues - progressively bluer, darker, and more saturated:
-#CCFFE6
-#8AE6CF
-#52CCCC base: hsb=180,60,80
-#2492B3 unused
-#003766 extra dark
-*/
-
 html {
     /* 100% width of parent (root) element */
     width: 100%;
@@ -23,7 +14,7 @@ h1 {
 }
 
 h1 a {
-    color: black;
+    color: inherit;
 }
 
 body {
@@ -52,7 +43,8 @@ div.container {
 div.header {
     padding-left: 12pt;
     padding-right: 12pt;
-    background: SkyBlue;
+    background: #00294D;
+    color: white;
     text-align: center;
     /* head corresponds to name in template */
     grid-area: head;
@@ -60,7 +52,7 @@ div.header {
 
 div.footer {
     padding: 12pt;
-    background: #003766;
+    background: #00294D;
     color: white;
     text-align: center;
     grid-area: foot;
