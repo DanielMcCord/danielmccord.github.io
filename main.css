@@ -24,6 +24,10 @@ body {
     height: 100vh;
 }
 
+#current-page {
+    font-weight: bolder;
+}
+
 div.container {
     /* mainbody height never squishes < 25rem */
     min-height: 25rem;
@@ -31,13 +35,13 @@ div.container {
     width: 100%;
     height: 100%;
     grid-template-columns:
-        [left] 10rem auto 10rem [right];
+        [left] 10em auto [right];
     grid-template-rows:
         [top] max-content auto max-content [bottom];
     grid-template-areas:
-        "head head head"
-        "panleft mainbody panright"
-        "foot foot foot";
+        "head head"
+        "panleft main"
+        "foot foot";
 }
 
 div.header {
@@ -66,24 +70,28 @@ div.panel {
 /* with both "panel" and "left" class */
 div.panel.left {
     grid-area: panleft;
+    padding-right: 12pt;
 }
 
+/*
 div.panel.right {
     grid-area: panright;
 }
+*/
 
-div.mainbody {
-    grid-area: mainbody;
+main {
+    display: flex;
+    grid-area: main;
     /* mainbody width is fixed */
-    max-width: 60rem;
+    /*    width: 100rem;*/
     /* and always centered in grid area */
-    justify-self: center;
+    justify-content: space-around;
+    margin: 12pt;
 }
 
 img.screenshot {
     max-width: 251px;
-    margin: 12pt;
-    float: right;
+    padding: 12pt;
 }
 
 /* if viewport width < 50rem */
@@ -93,10 +101,12 @@ img.screenshot {
         grid-column-end: left;
     }
 
+    /*
     div.panel.right {
-        /* right panel starts at right edge */
+        /\* right panel starts at right edge *\/
         grid-column-start: right;
     }
+    */
 
     div.panel {
         /* neither panel is displayed */
