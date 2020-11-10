@@ -84,17 +84,16 @@ main {
 
 main figure {
     padding-top: 24pt;
-    padding-left: 12pt;
+    padding-left: 10%;
     padding-right: 12pt;
-    text-align: center;
 }
 
 main figure img {
-    width: 75%;
+    max-width: 75%;
+    width: 540px;
     border: 1px solid #000000;
 }
 
 figcaption {
-    text-align: inherit;
-    font-size: 200%
+    font-size: 200%;
 }
