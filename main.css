@@ -54,7 +54,7 @@ div header {
     grid-area: head;
 }
 
-div.footer {
+footer {
     padding: 12pt;
     background: #00294D;
     color: white;
